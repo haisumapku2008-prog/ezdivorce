@@ -1,9 +1,9 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState, useCallback } from "react";
-import type { CaseData, USState } from "./types";
-import { determineRequiredForms } from "./rules/determineRequiredForms";
-import { getFormsByCodes } from "./forms/catalog";
+import type { CaseData, USState } from "@/lib/types";
+import { determineRequiredForms } from "@/lib/rules/determineRequiredForms";
+import { getFormsByCodes } from "@/lib/forms/catalog";
 
 const STORAGE_KEY = "divorce-filing-case";
 

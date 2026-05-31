@@ -1,4 +1,4 @@
-import type { USState } from "./types";
+import type { USState } from "../types";
 
 export interface StateInfo {
   code: USState;

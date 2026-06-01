@@ -49,7 +49,7 @@ export default function HomePage() {
               </Button>
             </Link>
             <Link href="/checklist">
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+              <Button size="lg" className="bg-teal-500 hover:bg-teal-400">
                 View filing guide
               </Button>
             </Link>

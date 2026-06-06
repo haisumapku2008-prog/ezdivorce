@@ -1,98 +1,33 @@
-import type { CaseData, ProcedureStep } from "../types";
+/**
+ * src/lib/procedures/index.ts
+ *
+ * Thin adapter — public API preserved for backward compatibility.
+ * All logic has moved to /src/catalog/ProcedureLoader.ts.
+ * All data has moved to /knowledge/procedures/.
+ *
+ * Do NOT add county conditionals here. Add a JSON file to /knowledge/procedures/ instead.
+ */
 
-const KING_COUNTY_BASE: ProcedureStep[] = [
-  {
-    stepNumber: 1,
-    title: "Confirm required forms",
-    description:
-      "Use our interview to determine your exact form set. King County requires official Washington State FL All Family forms. Verify your packet matches your situation (with or without minor children).",
-    url: "https://www.washingtonlawhelp.org/en/get-family-law-forms",
-    category: "preparation",
-    timeline: "30–60 minutes",
-  },
-  {
-    stepNumber: 2,
-    title: "Create a King County e-filing account",
-    description:
-      "Register at the King County Superior Court e-filing portal (File & ServeXpress or approved provider). You will need a valid email, payment method for filing fees, and your completed forms in PDF format.",
-    url: "https://kingcounty.gov/en/dept/dja/courts/superior-court/e-filing",
-    category: "preparation",
-    fees: "Filing fee ~$314 for dissolution (verify current fee schedule)",
-    timeline: "15 minutes",
-  },
-  {
-    stepNumber: 3,
-    title: "File the Petition and Summons",
-    description:
-      "Upload your Petition (FL All Family 103), Summons (FL All Family 119), and Confidential Information form (FL All Family 101). If you have children, include the Declaration Re Minor Children, Parenting Plan, and Child Support Worksheets. Pay the filing fee online.",
-    url: "https://kingcounty.gov/en/dept/dja/courts/superior-court/family-law",
-    requiredDocuments: ["FL All Family 101", "FL All Family 103", "FL All Family 119"],
-    category: "filing",
-    fees: "~$314 filing fee",
-    timeline: "Same day once forms are ready",
-  },
-  {
-    stepNumber: 4,
-    title: "Serve your spouse",
-    description:
-      "Your spouse must be formally served with the Summons and Petition. Acceptable methods include personal service by a third party (not you), service by sheriff, or acceptance of service if your spouse cooperates. File proof of service with the court.",
-    url: "https://www.washingtonlawhelp.org/en/divorce-guide/serving-divorce-papers",
-    requiredDocuments: ["Proof of Personal Service or Acceptance of Service"],
-    category: "service",
-    timeline: "Within 90 days of filing; sooner is better",
-  },
-  {
-    stepNumber: 5,
-    title: "Complete mandatory parenting seminar (if children)",
-    description:
-      "If you have minor children, both parents must typically complete a parenting seminar approved by the court within 60 days of service. Register early — classes fill up. Keep your certificate of completion.",
-    url: "https://www.kingcounty.gov/depts/superior-court/family-court/parenting-seminar",
-    category: "post_filing",
-    fees: "Varies by provider (~$40–$60)",
-    timeline: "Within 60 days of service",
-  },
-  {
-    stepNumber: 6,
-    title: "Observe the 90-day waiting period",
-    description:
-      "Washington requires a minimum 90-day waiting period from the date of filing and service before the court can enter final orders. Use this time to finalize your parenting plan, support calculations, and property/debt division.",
-    url: "https://www.washingtonlawhelp.org/en/divorce-guide",
-    category: "post_filing",
-    timeline: "Minimum 90 days from filing",
-  },
-  {
-    stepNumber: 7,
-    title: "Submit final orders and schedule hearing (if needed)",
-    description:
-      "Prepare Findings of Fact, Conclusions of Law, and Decree of Dissolution (FL All Family 185 or equivalent). For agreed cases, you may submit by mail or e-filing depending on local rules. Some King County cases require a brief hearing.",
-    url: "https://www.washingtonlawhelp.org/en/divorce-guide/finalizing-divorce",
-    requiredDocuments: ["Final Divorce Order", "Parenting Plan (if children)", "Child Support Order (if children)"],
-    category: "completion",
-    timeline: "After 90-day waiting period",
-  },
-];
+import { generateChecklist as _generateChecklist } from "../../catalog/ProcedureLoader";
+import type { ProcedureStep } from "../types";
+import type { CountyProcedureStep } from "../../domain/CountyProcedure";
 
-const PIERCE_COUNTY_OVERRIDES: Partial<ProcedureStep>[] = [
-  {
-    stepNumber: 2,
-    title: "Create a Pierce County e-filing account",
-    description: "Register with Pierce County Superior Court e-filing. Requirements mirror King County but use Pierce County portals.",
-    url: "https://www.piercecountywa.gov/609/Superior-Court",
-  },
-];
-
-function applyCountyOverrides(steps: ProcedureStep[], county: string): ProcedureStep[] {
-  if (county === "pierce") {
-    return steps.map((step) => {
-      const override = PIERCE_COUNTY_OVERRIDES.find((o) => o.stepNumber === step.stepNumber);
-      return override ? { ...step, ...override } : step;
-    });
-  }
-  return steps;
+function toProcedureStep(step: CountyProcedureStep): ProcedureStep {
+  return {
+    stepNumber: step.stepNumber,
+    title: step.title,
+    description: step.description,
+    category: step.category,
+    url: step.url,
+    fees: step.fees ?? undefined,
+    timeline: step.timeline ?? undefined,
+    requiredDocuments: step.requiredDocuments ?? undefined,
+  };
 }
 
 /**
- * Deterministic procedure engine — generates county-specific filing checklist.
+ * @deprecated Use ProcedureLoader.generateChecklist() directly.
+ * This wrapper is kept for backward compatibility with existing pages.
  */
 export function generateChecklist(
   county: string,
@@ -100,22 +35,32 @@ export function generateChecklist(
   state: string
 ): ProcedureStep[] {
   if (state !== "WA") {
-    return [{
-      stepNumber: 1,
-      title: "State not yet supported",
-      description: "Detailed county procedures are available for Washington State counties. Select WA to see full guidance.",
-      category: "preparation",
-    }];
+    return [
+      {
+        stepNumber: 1,
+        title: "State not yet supported",
+        description:
+          "Detailed county procedures are currently available for Washington State. " +
+          "Select WA to see full guidance.",
+        category: "preparation",
+      },
+    ];
   }
 
-  let steps = applyCountyOverrides([...KING_COUNTY_BASE], county);
+  const steps = _generateChecklist(state, county, hasChildren);
 
-  if (!hasChildren) {
-    steps = steps.filter((s) => s.stepNumber !== 5);
-    steps = steps.map((s, i) => ({ ...s, stepNumber: i + 1 }));
+  if (steps.length === 0) {
+    return [
+      {
+        stepNumber: 1,
+        title: "County procedures coming soon",
+        description: `Detailed procedures for ${county} County are not yet available. Check back soon.`,
+        category: "preparation",
+      },
+    ];
   }
 
-  return steps;
+  return steps.map(toProcedureStep);
 }
 
 export function getCountyDisplayName(county: string): string {

@@ -1,0 +1,98 @@
+{
+  "county": "pierce",
+  "state": "WA",
+  "caseType": "divorce-uncontested",
+  "effectiveDate": "2024-01-01",
+  "sourceUrl": "https://www.piercecountywa.gov/609/Superior-Court",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Confirm required forms",
+      "description": "Use our interview to determine your exact form set. Pierce County requires official Washington State FL All Family forms. Verify your packet matches your situation (with or without minor children).",
+      "category": "preparation",
+      "url": "https://www.washingtonlawhelp.org/en/get-family-law-forms",
+      "fees": null,
+      "timeline": "30–60 minutes",
+      "requiredDocuments": [],
+      "requiresChildren": false
+    },
+    {
+      "stepNumber": 2,
+      "title": "Create a Pierce County e-filing account",
+      "description": "Register with Pierce County Superior Court e-filing. Requirements mirror King County but use Pierce County portals and fee schedules. Verify current fees on the Pierce County website.",
+      "category": "preparation",
+      "url": "https://www.piercecountywa.gov/609/Superior-Court",
+      "fees": "Filing fee varies — verify current fee schedule at Pierce County Superior Court",
+      "timeline": "15 minutes",
+      "requiredDocuments": [],
+      "requiresChildren": false
+    },
+    {
+      "stepNumber": 3,
+      "title": "File the Petition and Summons",
+      "description": "Upload your Petition (FL All Family 103), Summons (FL All Family 119), and Confidential Information form (FL All Family 101). If you have children, include the Declaration Re Minor Children, Parenting Plan, and Child Support Worksheets.",
+      "category": "filing",
+      "url": "https://www.piercecountywa.gov/609/Superior-Court",
+      "fees": "Verify current filing fee at Pierce County Superior Court",
+      "timeline": "Same day once forms are ready",
+      "requiredDocuments": [
+        "FL All Family 101 — Confidential Information",
+        "FL All Family 103 — Petition for Dissolution",
+        "FL All Family 119 — Summons"
+      ],
+      "requiresChildren": false
+    },
+    {
+      "stepNumber": 4,
+      "title": "Serve your spouse",
+      "description": "Your spouse must be formally served with the Summons and Petition. File proof of service with the court.",
+      "category": "service",
+      "url": "https://www.washingtonlawhelp.org/en/divorce-guide/serving-divorce-papers",
+      "fees": "Sheriff service fee varies (~$50–$100)",
+      "timeline": "Within 90 days of filing",
+      "requiredDocuments": [
+        "Proof of Personal Service or Acceptance of Service"
+      ],
+      "requiresChildren": false
+    },
+    {
+      "stepNumber": 5,
+      "title": "Complete mandatory parenting seminar",
+      "description": "Both parents must complete a court-approved parenting seminar within 60 days of service. Keep your certificate of completion.",
+      "category": "post_filing",
+      "url": "https://www.piercecountywa.gov/609/Superior-Court",
+      "fees": "Varies by provider (~$40–$60)",
+      "timeline": "Within 60 days of service",
+      "requiredDocuments": [
+        "Certificate of Completion (from approved provider)"
+      ],
+      "requiresChildren": true
+    },
+    {
+      "stepNumber": 6,
+      "title": "Observe the 90-day waiting period",
+      "description": "Washington requires a minimum 90-day waiting period before final orders can be entered.",
+      "category": "post_filing",
+      "url": "https://www.washingtonlawhelp.org/en/divorce-guide",
+      "fees": null,
+      "timeline": "Minimum 90 days from filing",
+      "requiredDocuments": [],
+      "requiresChildren": false
+    },
+    {
+      "stepNumber": 7,
+      "title": "Submit final orders",
+      "description": "File the Decree of Dissolution and any associated orders. Include Parenting Plan and Child Support Order if you have children.",
+      "category": "completion",
+      "url": "https://www.washingtonlawhelp.org/en/divorce-guide/finalizing-divorce",
+      "fees": null,
+      "timeline": "After the 90-day waiting period",
+      "requiredDocuments": [
+        "FL All Family 185 — Decree of Dissolution",
+        "FL All Family 131 — Parenting Plan (if children)",
+        "Child Support Order (if children)"
+      ],
+      "requiresChildren": false
+    }
+  ]
+}

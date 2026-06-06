@@ -1,0 +1,157 @@
+[
+  {
+    "formCode": "FL_ALL_FAMILY_101",
+    "title": "Confidential Information Form",
+    "state": "WA",
+    "county": null,
+    "description": "Required confidential identifying information for all family law cases. Filed under seal and not accessible to the public.",
+    "required": true,
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_101.pdf",
+    "sourceCourtName": "Washington State Courts",
+    "fields": [
+      { "key": "petitionerName",  "label": "Petitioner full legal name",   "type": "text",  "required": true,  "pdfField": "petitioner_name" },
+      { "key": "respondentName",  "label": "Respondent full legal name",   "type": "text",  "required": true,  "pdfField": "respondent_name" },
+      { "key": "petitionerDOB",   "label": "Petitioner date of birth",     "type": "date",  "required": true,  "pdfField": "petitioner_dob" },
+      { "key": "respondentDOB",   "label": "Respondent date of birth",     "type": "date",  "required": true,  "pdfField": "respondent_dob" },
+      { "key": "petitionerSSN",   "label": "Petitioner SSN (last 4 only)", "type": "text",  "required": true,  "pdfField": "petitioner_ssn_last4", "helpText": "Only last 4 digits are stored" },
+      { "key": "respondentSSN",   "label": "Respondent SSN (last 4 only)", "type": "text",  "required": true,  "pdfField": "respondent_ssn_last4" }
+    ]
+  },
+  {
+    "formCode": "FL_ALL_FAMILY_103",
+    "title": "Petition for Dissolution of Marriage",
+    "state": "WA",
+    "county": null,
+    "description": "Primary petition to start an uncontested dissolution (divorce) in Washington State.",
+    "required": true,
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_103.pdf",
+    "sourceCourtName": "Washington State Courts",
+    "fields": [
+      { "key": "petitionerName",    "label": "Petitioner full legal name",         "type": "text",     "required": true,  "pdfField": "petitioner_name" },
+      { "key": "respondentName",    "label": "Respondent full legal name",         "type": "text",     "required": true,  "pdfField": "respondent_name" },
+      { "key": "petitionerAddress", "label": "Petitioner address",                 "type": "textarea", "required": true,  "pdfField": "petitioner_address" },
+      { "key": "respondentAddress", "label": "Respondent last known address",      "type": "textarea", "required": true,  "pdfField": "respondent_address" },
+      { "key": "dateMarried",       "label": "Date of marriage",                   "type": "date",     "required": true,  "pdfField": "date_married" },
+      { "key": "dateSeparated",     "label": "Date of separation",                 "type": "date",     "required": true,  "pdfField": "date_separated" },
+      { "key": "county",            "label": "County of filing",                   "type": "text",     "required": true,  "pdfField": "county_of_filing" },
+      { "key": "grounds",           "label": "Grounds for dissolution",            "type": "select",   "required": true,  "pdfField": "grounds",
+        "options": [{ "value": "irretrievably_broken", "label": "Marriage is irretrievably broken" }]
+      },
+      { "key": "hasChildren",    "label": "Minor children of the marriage",     "type": "checkbox", "required": false, "pdfField": "has_children" },
+      { "key": "childrenCount",  "label": "Number of minor children",           "type": "number",   "required": false, "pdfField": "children_count" }
+    ]
+  },
+  {
+    "formCode": "FL_ALL_FAMILY_119",
+    "title": "Summons: Notice About a Marriage",
+    "state": "WA",
+    "county": null,
+    "description": "Official summons notifying the respondent of the divorce action. Must be served on the respondent.",
+    "required": true,
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_119.pdf",
+    "sourceCourtName": "Washington State Courts",
+    "fields": [
+      { "key": "petitionerName", "label": "Petitioner name",                         "type": "text", "required": true,  "pdfField": "petitioner_name" },
+      { "key": "respondentName", "label": "Respondent name",                         "type": "text", "required": true,  "pdfField": "respondent_name" },
+      { "key": "courtName",      "label": "Superior Court (e.g. King County Superior Court)", "type": "text", "required": true,  "pdfField": "court_name" },
+      { "key": "caseNumber",     "label": "Case number (if already assigned)",        "type": "text", "required": false, "pdfField": "case_number" }
+    ]
+  },
+  {
+    "formCode": "FL_ALL_FAMILY_140",
+    "title": "Declaration Re: Service Members Civil Relief Act",
+    "state": "WA",
+    "county": null,
+    "description": "Required when minor children are involved. Declares whether the respondent is an active-duty service member.",
+    "required": true,
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_140.pdf",
+    "sourceCourtName": "Washington State Courts",
+    "fields": [
+      { "key": "petitionerName",  "label": "Petitioner name",                             "type": "text",     "required": true, "pdfField": "petitioner_name" },
+      { "key": "respondentName",  "label": "Respondent name",                             "type": "text",     "required": true, "pdfField": "respondent_name" },
+      { "key": "childrenCount",   "label": "Number of minor children",                    "type": "number",   "required": true, "pdfField": "children_count" },
+      { "key": "childrenNames",   "label": "Names and dates of birth of each child",      "type": "textarea", "required": true, "pdfField": "children_names_dobs" }
+    ]
+  },
+  {
+    "formCode": "FL_ALL_FAMILY_131",
+    "title": "Parenting Plan",
+    "state": "WA",
+    "county": null,
+    "description": "Proposed residential schedule and decision-making arrangement for minor children.",
+    "required": true,
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_131.pdf",
+    "sourceCourtName": "Washington State Courts",
+    "fields": [
+      { "key": "petitionerName",       "label": "Petitioner name",            "type": "text",   "required": true,  "pdfField": "petitioner_name" },
+      { "key": "respondentName",       "label": "Respondent name",            "type": "text",   "required": true,  "pdfField": "respondent_name" },
+      { "key": "primaryResidential",   "label": "Primary residential parent", "type": "select", "required": true,  "pdfField": "primary_residential",
+        "options": [
+          { "value": "petitioner", "label": "Petitioner" },
+          { "value": "respondent", "label": "Respondent" },
+          { "value": "shared",     "label": "Shared / equal time" }
+        ]
+      },
+      { "key": "holidaySchedule", "label": "Holiday schedule summary",  "type": "textarea", "required": false, "pdfField": "holiday_schedule" },
+      { "key": "decisionMaking",  "label": "Major decision-making",     "type": "select",   "required": false, "pdfField": "decision_making",
+        "options": [
+          { "value": "joint",       "label": "Joint" },
+          { "value": "petitioner",  "label": "Petitioner" },
+          { "value": "respondent",  "label": "Respondent" }
+        ]
+      }
+    ]
+  },
+  {
+    "formCode": "FL_ALL_FAMILY_165",
+    "title": "Child Support Worksheets",
+    "state": "WA",
+    "county": null,
+    "description": "Financial worksheets used to calculate child support obligations under the Washington State Child Support Schedule.",
+    "required": true,
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_165.pdf",
+    "sourceCourtName": "Washington State Courts",
+    "fields": [
+      { "key": "petitionerIncome", "label": "Petitioner gross monthly income",              "type": "number", "required": true,  "pdfField": "petitioner_gross_income" },
+      { "key": "respondentIncome", "label": "Respondent gross monthly income",              "type": "number", "required": true,  "pdfField": "respondent_gross_income" },
+      { "key": "childrenCount",    "label": "Number of children",                           "type": "number", "required": true,  "pdfField": "children_count" },
+      { "key": "healthInsurance",  "label": "Who provides health insurance for children",   "type": "select", "required": false, "pdfField": "health_insurance_provider",
+        "options": [
+          { "value": "petitioner", "label": "Petitioner" },
+          { "value": "respondent", "label": "Respondent" },
+          { "value": "both",       "label": "Both" }
+        ]
+      }
+    ]
+  },
+  {
+    "formCode": "FL_ALL_FAMILY_185",
+    "title": "Decree of Dissolution of Marriage",
+    "state": "WA",
+    "county": null,
+    "description": "Proposed final orders for the uncontested dissolution. Signed by the judge to finalize the divorce.",
+    "required": true,
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_185.pdf",
+    "sourceCourtName": "Washington State Courts",
+    "fields": [
+      { "key": "petitionerName",    "label": "Petitioner name",             "type": "text",     "required": true,  "pdfField": "petitioner_name" },
+      { "key": "respondentName",    "label": "Respondent name",             "type": "text",     "required": true,  "pdfField": "respondent_name" },
+      { "key": "propertyDivision",  "label": "Property division summary",   "type": "textarea", "required": false, "pdfField": "property_division" },
+      { "key": "debtDivision",      "label": "Debt division summary",       "type": "textarea", "required": false, "pdfField": "debt_division" }
+    ]
+  }
+]

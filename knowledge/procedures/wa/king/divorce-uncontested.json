@@ -1,0 +1,98 @@
+{
+  "county": "king",
+  "state": "WA",
+  "caseType": "divorce-uncontested",
+  "effectiveDate": "2024-01-01",
+  "sourceUrl": "https://kingcounty.gov/en/dept/dja/courts/superior-court/family-law",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Confirm required forms",
+      "description": "Use our interview to determine your exact form set. King County requires official Washington State FL All Family forms. Verify your packet matches your situation (with or without minor children).",
+      "category": "preparation",
+      "url": "https://www.washingtonlawhelp.org/en/get-family-law-forms",
+      "fees": null,
+      "timeline": "30–60 minutes",
+      "requiredDocuments": [],
+      "requiresChildren": false
+    },
+    {
+      "stepNumber": 2,
+      "title": "Create a King County e-filing account",
+      "description": "Register at the King County Superior Court e-filing portal (File & ServeXpress or approved provider). You will need a valid email, payment method for filing fees, and your completed forms in PDF format.",
+      "category": "preparation",
+      "url": "https://kingcounty.gov/en/dept/dja/courts/superior-court/e-filing",
+      "fees": "Filing fee approximately $314 for dissolution (verify current fee schedule at the link above)",
+      "timeline": "15 minutes",
+      "requiredDocuments": [],
+      "requiresChildren": false
+    },
+    {
+      "stepNumber": 3,
+      "title": "File the Petition and Summons",
+      "description": "Upload your Petition (FL All Family 103), Summons (FL All Family 119), and Confidential Information form (FL All Family 101). If you have children, include the Declaration Re Minor Children, Parenting Plan, and Child Support Worksheets. Pay the filing fee online.",
+      "category": "filing",
+      "url": "https://kingcounty.gov/en/dept/dja/courts/superior-court/family-law",
+      "fees": "~$314 filing fee",
+      "timeline": "Same day once forms are ready",
+      "requiredDocuments": [
+        "FL All Family 101 — Confidential Information",
+        "FL All Family 103 — Petition for Dissolution",
+        "FL All Family 119 — Summons"
+      ],
+      "requiresChildren": false
+    },
+    {
+      "stepNumber": 4,
+      "title": "Serve your spouse",
+      "description": "Your spouse must be formally served with the Summons and Petition. Acceptable methods include personal service by a third party (not you), service by sheriff, or acceptance of service if your spouse cooperates. File proof of service with the court.",
+      "category": "service",
+      "url": "https://www.washingtonlawhelp.org/en/divorce-guide/serving-divorce-papers",
+      "fees": "Sheriff service fee varies by county (~$50–$100)",
+      "timeline": "Within 90 days of filing; sooner is better",
+      "requiredDocuments": [
+        "Proof of Personal Service or Acceptance of Service"
+      ],
+      "requiresChildren": false
+    },
+    {
+      "stepNumber": 5,
+      "title": "Complete mandatory parenting seminar",
+      "description": "Both parents must complete a parenting seminar approved by the court within 60 days of service. Register early — classes fill up. Keep your certificate of completion to file with the court.",
+      "category": "post_filing",
+      "url": "https://www.kingcounty.gov/depts/superior-court/family-court/parenting-seminar",
+      "fees": "Varies by provider (~$40–$60)",
+      "timeline": "Within 60 days of service",
+      "requiredDocuments": [
+        "Certificate of Completion (from approved provider)"
+      ],
+      "requiresChildren": true
+    },
+    {
+      "stepNumber": 6,
+      "title": "Observe the 90-day waiting period",
+      "description": "Washington requires a minimum 90-day waiting period from the date of filing and service before the court can enter final orders. Use this time to finalize your parenting plan, support calculations, and property and debt division.",
+      "category": "post_filing",
+      "url": "https://www.washingtonlawhelp.org/en/divorce-guide",
+      "fees": null,
+      "timeline": "Minimum 90 days from filing",
+      "requiredDocuments": [],
+      "requiresChildren": false
+    },
+    {
+      "stepNumber": 7,
+      "title": "Submit final orders",
+      "description": "Prepare and file the Decree of Dissolution (FL All Family 185). For agreed cases, you may submit by e-filing. Some King County cases require a brief hearing — check with the court clerk. Include the Parenting Plan and Child Support Order if you have children.",
+      "category": "completion",
+      "url": "https://www.washingtonlawhelp.org/en/divorce-guide/finalizing-divorce",
+      "fees": null,
+      "timeline": "After the 90-day waiting period",
+      "requiredDocuments": [
+        "FL All Family 185 — Decree of Dissolution",
+        "FL All Family 131 — Parenting Plan (if children)",
+        "Child Support Order (if children)"
+      ],
+      "requiresChildren": false
+    }
+  ]
+}

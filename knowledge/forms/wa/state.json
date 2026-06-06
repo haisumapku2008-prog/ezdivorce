@@ -1,0 +1,8 @@
+{
+  "state": "WA",
+  "name": "Washington",
+  "supportedCounties": ["king"],
+  "effectiveDate": "2022-09-01",
+  "sourceUrl": "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=13",
+  "notes": "Washington State Courts publish all family law forms at courts.wa.gov. Forms are revised periodically; effectiveDate on each form reflects the most recent revision."
+}

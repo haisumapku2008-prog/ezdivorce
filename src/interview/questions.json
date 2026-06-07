@@ -1,0 +1,160 @@
+[
+  {
+    "id": "state",
+    "step": "Location",
+    "type": "state-select",
+    "question": "Which state do you live in?",
+    "helpText": "Washington State is fully supported. Other states are coming soon.",
+    "field": "state",
+    "required": true
+  },
+  {
+    "id": "county",
+    "step": "Location",
+    "type": "county-select",
+    "question": "Which county will you file in?",
+    "helpText": "Select the county where you currently live.",
+    "field": "county",
+    "required": true,
+    "showIf": { "field": "state", "value": "WA" }
+  },
+  {
+    "id": "city",
+    "step": "Location",
+    "type": "text",
+    "question": "City (optional)",
+    "field": "city",
+    "required": false,
+    "placeholder": "e.g. Seattle"
+  },
+  {
+    "id": "livesInState",
+    "step": "Residency",
+    "type": "boolean",
+    "question": "Do you currently live in this state?",
+    "helpText": "Washington requires at least one spouse to have lived in the state for 90 days before filing.",
+    "field": "livesInState",
+    "required": true,
+    "labels": ["Yes", "No"]
+  },
+  {
+    "id": "isContested",
+    "step": "Residency",
+    "type": "boolean",
+    "question": "Is your spouse expected to disagree with the divorce terms?",
+    "helpText": "An uncontested divorce means both parties agree on all terms: property, debt, and (if applicable) children.",
+    "field": "isContested",
+    "required": true,
+    "labels": ["No — uncontested", "Yes — contested"],
+    "invertDisplay": true
+  },
+  {
+    "id": "spouseLocatable",
+    "step": "Residency",
+    "type": "boolean",
+    "question": "Can your spouse be located for legal service?",
+    "helpText": "Your spouse must be served with divorce papers. If they cannot be found, alternative service rules apply.",
+    "field": "spouseLocatable",
+    "required": true,
+    "labels": ["Yes", "No / unknown"]
+  },
+  {
+    "id": "dateMarried",
+    "step": "Marriage",
+    "type": "date",
+    "question": "Date of marriage",
+    "field": "dateMarried",
+    "required": false
+  },
+  {
+    "id": "dateSeparated",
+    "step": "Marriage",
+    "type": "date",
+    "question": "Date of separation",
+    "helpText": "The date you and your spouse stopped living together as a couple.",
+    "field": "dateSeparated",
+    "required": false
+  },
+  {
+    "id": "hasChildren",
+    "step": "Children",
+    "type": "boolean",
+    "question": "Do you have minor children together?",
+    "helpText": "Minor children are those under 18. If yes, additional forms (Parenting Plan, Child Support) will be required.",
+    "field": "hasChildren",
+    "required": true,
+    "labels": ["No", "Yes"],
+    "invertDisplay": true
+  },
+  {
+    "id": "childrenCount",
+    "step": "Children",
+    "type": "number",
+    "question": "How many minor children do you have together?",
+    "field": "childrenCount",
+    "required": true,
+    "min": 1,
+    "showIf": { "field": "hasChildren", "value": true }
+  },
+  {
+    "id": "hasHouse",
+    "step": "Property",
+    "type": "checkbox",
+    "question": "Real estate / home",
+    "field": "hasHouse",
+    "required": false
+  },
+  {
+    "id": "hasVehicles",
+    "step": "Property",
+    "type": "checkbox",
+    "question": "Vehicles",
+    "field": "hasVehicles",
+    "required": false
+  },
+  {
+    "id": "hasRetirement",
+    "step": "Property",
+    "type": "checkbox",
+    "question": "Retirement accounts (401k, IRA, pension)",
+    "field": "hasRetirement",
+    "required": false
+  },
+  {
+    "id": "hasDebt",
+    "step": "Property",
+    "type": "checkbox",
+    "question": "Shared debt (credit cards, loans)",
+    "field": "hasDebt",
+    "required": false
+  },
+  {
+    "id": "petitionerName",
+    "step": "Parties",
+    "type": "text",
+    "question": "Your full legal name (Petitioner)",
+    "helpText": "Enter your name exactly as it appears on your government-issued ID.",
+    "field": "petitionerName",
+    "required": true,
+    "placeholder": "First Middle Last"
+  },
+  {
+    "id": "respondentName",
+    "step": "Parties",
+    "type": "text",
+    "question": "Spouse's full legal name (Respondent)",
+    "helpText": "Enter your spouse's name exactly as it appears on their government-issued ID.",
+    "field": "respondentName",
+    "required": true,
+    "placeholder": "First Middle Last"
+  },
+  {
+    "id": "petitionerEmail",
+    "step": "Parties",
+    "type": "email",
+    "question": "Your email address",
+    "field": "petitionerEmail",
+    "required": false,
+    "placeholder": "you@example.com"
+  }
+]

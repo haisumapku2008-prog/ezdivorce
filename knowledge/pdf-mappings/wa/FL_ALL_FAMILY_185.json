@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "formCode": "FL_ALL_FAMILY_185",
+    "title": "Decree of Dissolution of Marriage",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_185.pdf",
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "notes": "Final order signed by the judge. Property and debt division summaries come from form editor answers."
+  },
+  "mappings": {
+    "petitioner_name":   "petitioner.fullName",
+    "respondent_name":   "respondent.fullName",
+    "property_division": "__formAnswer:FL_ALL_FAMILY_185.propertyDivision",
+    "debt_division":     "__formAnswer:FL_ALL_FAMILY_185.debtDivision"
+  }
+}

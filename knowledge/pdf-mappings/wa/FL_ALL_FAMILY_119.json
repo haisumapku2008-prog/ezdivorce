@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "formCode": "FL_ALL_FAMILY_119",
+    "title": "Summons: Notice About a Marriage",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_119.pdf",
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022"
+  },
+  "mappings": {
+    "petitioner_name": "petitioner.fullName",
+    "respondent_name": "respondent.fullName",
+    "court_name":      "__county_court:marriage.county",
+    "case_number":     "__literal:"
+  }
+}

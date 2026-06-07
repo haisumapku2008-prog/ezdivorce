@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "formCode": "FL_ALL_FAMILY_101",
+    "title": "Confidential Information Form",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_101.pdf",
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "notes": "Filed under seal. pdfField values are the AcroForm field names in the official PDF. CaseContext paths use dot notation resolved against the CaseContext object."
+  },
+  "mappings": {
+    "petitioner_name":     "petitioner.fullName",
+    "respondent_name":     "respondent.fullName",
+    "petitioner_dob":      "petitioner.dateOfBirth",
+    "respondent_dob":      "respondent.dateOfBirth",
+    "petitioner_ssn_last4":"petitioner.ssnLast4",
+    "respondent_ssn_last4":"respondent.ssnLast4"
+  }
+}

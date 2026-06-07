@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "formCode": "FL_ALL_FAMILY_103",
+    "title": "Petition for Dissolution of Marriage",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_103.pdf",
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022"
+  },
+  "mappings": {
+    "petitioner_name":    "petitioner.fullName",
+    "respondent_name":    "respondent.fullName",
+    "petitioner_address": "petitioner.address",
+    "respondent_address": "respondent.address",
+    "date_married":       "marriage.dateMarried",
+    "date_separated":     "marriage.dateSeparated",
+    "county_of_filing":   "marriage.county",
+    "grounds":            "__literal:irretrievably_broken",
+    "has_children":       "__bool:children.length",
+    "children_count":     "children.length"
+  }
+}

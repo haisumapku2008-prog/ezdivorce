@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "formCode": "FL_ALL_FAMILY_165",
+    "title": "Child Support Worksheets",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_165.pdf",
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "notes": "Income and insurance fields come from formAnswers entered by the user in the form editor."
+  },
+  "mappings": {
+    "petitioner_gross_income":   "__formAnswer:FL_ALL_FAMILY_165.petitionerIncome",
+    "respondent_gross_income":   "__formAnswer:FL_ALL_FAMILY_165.respondentIncome",
+    "children_count":            "children.length",
+    "health_insurance_provider": "__formAnswer:FL_ALL_FAMILY_165.healthInsurance"
+  }
+}

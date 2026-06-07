@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "formCode": "FL_ALL_FAMILY_140",
+    "title": "Declaration Re: Service Members Civil Relief Act",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_140.pdf",
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "notes": "Required when minor children are present."
+  },
+  "mappings": {
+    "petitioner_name":      "petitioner.fullName",
+    "respondent_name":      "respondent.fullName",
+    "children_count":       "children.length",
+    "children_names_dobs":  "__children_list:children"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "formCode": "FL_ALL_FAMILY_131",
+    "title": "Parenting Plan",
+    "sourceUrl": "https://www.courts.wa.gov/forms/documents/FL_All_Family_131.pdf",
+    "effectiveDate": "2022-09-01",
+    "version": "09/2022",
+    "notes": "Required when minor children are present. primaryResidential and decisionMaking come from formAnswers if provided by user."
+  },
+  "mappings": {
+    "petitioner_name":     "petitioner.fullName",
+    "respondent_name":     "respondent.fullName",
+    "primary_residential": "__formAnswer:FL_ALL_FAMILY_131.primaryResidential",
+    "holiday_schedule":    "__formAnswer:FL_ALL_FAMILY_131.holidaySchedule",
+    "decision_making":     "__formAnswer:FL_ALL_FAMILY_131.decisionMaking"
+  }
+}
